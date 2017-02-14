@@ -1,0 +1,2 @@
+ElasticSearch Search {emptyTerm|term} of past {minutes} minutes
+ElasticCount Count {emptyTerm|term} of past {minutes} minutes
