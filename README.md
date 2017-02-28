@@ -129,3 +129,4 @@ At this point it is possible to enable this skill for all amazon echos, register
 
 ## Open issues
 - Make skill configurable so that each user (amazon account) can configure his own ElasticSearch cluster and credentials during skill installation. Currently all users of this skill would talk to the same ElasticSearch cluster, which is .. not really cool :-/
+- => See https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/linking-an-alexa-user-with-a-user-in-your-system
