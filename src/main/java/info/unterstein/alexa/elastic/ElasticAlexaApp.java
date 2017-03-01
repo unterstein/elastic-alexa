@@ -1,8 +1,7 @@
-package io.voiceops.elastic;
+package info.unterstein.alexa.elastic;
 
 import com.amazon.speech.Sdk;
 import com.amazon.speech.speechlet.servlet.SpeechletServlet;
-import io.voiceops.elastic.ElasticSpeechlet;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;

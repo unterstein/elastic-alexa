@@ -1,4 +1,4 @@
-package io.voiceops.elastic;
+package info.unterstein.alexa.elastic;
 
 
 import org.elasticsearch.client.transport.TransportClient;

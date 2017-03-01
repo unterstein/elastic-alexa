@@ -1,4 +1,4 @@
-package io.voiceops.elastic;
+package info.unterstein.alexa.elastic;
 
 import com.amazon.speech.slu.Intent;
 import com.amazon.speech.speechlet.*;
