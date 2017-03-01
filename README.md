@@ -6,19 +6,17 @@ Skill for Amazon echo to enable `Alexa` to talk to [Elasticsearch](https://elast
 Configured `IntentSchema`:
 
 ```
-ElasticSearch Search {emptyTerm|term} of past {minutes} minutes
-ElasticCount Count {emptyTerm|term} of past {minutes} minutes
+ElasticCount Count {emptyTerm|term}
 ```
 
 Explanation:
 
- 1. Search term in elasticsearch
  2. Search for term in elasticsearch and count result set
 
 Example:
 
 ```
-Alexa? Ask Elastic to search error of past five minutes
+Alexa? Ask Elastic to count error
 ```
 
 is transformed to skill (intent) and variable configuration (slots):
@@ -26,7 +24,6 @@ is transformed to skill (intent) and variable configuration (slots):
 ```
 intent=ElasticSearch
 slot(term)=error
-slot(minutes)=5
 ```
 
 **Note:** Data type `number` can be translated from `five` to `5` directly.
