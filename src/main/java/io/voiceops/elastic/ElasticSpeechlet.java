@@ -12,8 +12,10 @@ import org.springframework.stereotype.Component;
 public class ElasticSpeechlet implements Speechlet {
   private static final Logger log = LoggerFactory.getLogger(ElasticSpeechlet.class);
 
+  private final ElasticSearchClient client;
+
   public ElasticSpeechlet() {
-    // TODO initialize elasticsearch client
+    client = new ElasticSearchClient("host", 9300, "muCluster");
   }
 
   @Override
@@ -37,12 +39,10 @@ public class ElasticSpeechlet implements Speechlet {
     Intent intent = request.getIntent();
     String intentName = (intent != null) ? intent.getName() : null;
 
-    if ("ElasticSearch".equals(intentName)) {
-      // TODO implement ElasticSearch intent
-      return errorResponse();
-    } else if ("ElasticCount".equals(intentName)) {
-      // TODO implement ElasticCount intent
-      return errorResponse();
+    if ("ElasticCount".equals(intentName)) {
+      String term = intent.getSlot("term").getValue();
+      long count = client.count(term);
+      return countResponse(count, term);
     } else {
       log.error("Intent {} not recognized for requestId {}", intentName, request.getRequestId());
       throw new SpeechletException("Invalid Intent");
@@ -67,6 +67,21 @@ public class ElasticSpeechlet implements Speechlet {
 
     PlainTextOutputSpeech result = new PlainTextOutputSpeech();
     result.setText(speechText);
+
+    return SpeechletResponse.newTellResponse(result);
+  }
+
+  /**
+   * Count response
+   *
+   * @return count response.
+   */
+  private SpeechletResponse countResponse(long count, String term) {
+    // TODO use i18n
+    String speechText = "Found %d %s.";
+
+    PlainTextOutputSpeech result = new PlainTextOutputSpeech();
+    result.setText(String.format(speechText, count, term));
 
     return SpeechletResponse.newTellResponse(result);
   }
