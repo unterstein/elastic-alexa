@@ -1,28 +1,11 @@
 {
   "intents":[
     {
-      "intent":"ElasticSearch",
-      "slots":[
-        {
-          "name":"term",
-          "type":"AMAZON.LITERAL"
-        },
-        {
-          "name":"minutes",
-          "type":"AMAZON.NUMBER"
-        }
-      ]
-    },
-    {
       "intent":"ElasticCount",
       "slots":[
         {
           "name":"term",
           "type":"AMAZON.LITERAL"
-        },
-        {
-          "name":"minutes",
-          "type":"AMAZON.NUMBER"
         }
       ]
     }
