@@ -36,7 +36,7 @@ slot(minutes)=5
 Amazon provided a nice SDK and a nice way to interact with alexa. After registering your skill to amazon developer console, your endpoint get called with relevant payload. I decided to use a spring boot application handling these requests. Java code is in `src`, relevant business logic is included in
 
 ```
-src/main/java/io/voiceops/elastic/alexa/ElasticSpeechlet.java
+src/main/java/info/unterstein/alexa/elastic/alexa/ElasticSpeechlet.java
 ```
 
 
@@ -45,7 +45,7 @@ Currently you need to configure the target ElasticSearch cluster within code. Th
 But, for now, you need to go to
 
 ```
-src/main/java/io/voiceops/elastic/ElasticSpeechlet.java
+src/main/java/info/unterstein/alexa//elastic/ElasticSpeechlet.java
 ```
 
 and do something like:
