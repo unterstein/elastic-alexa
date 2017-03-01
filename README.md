@@ -45,7 +45,7 @@ Currently you need to configure the target ElasticSearch cluster within code. Th
 But, for now, you need to go to
 
 ```
-src/main/java/info/unterstein/alexa//elastic/ElasticSpeechlet.java
+src/main/java/info/unterstein/alexa/elastic/ElasticSpeechlet.java
 ```
 
 and do something like:
