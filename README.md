@@ -53,7 +53,7 @@ and do something like:
 ```
   // TODO
   public ElasticSpeechlet.java() {
-    client = new ElasticSearchClient("your.elastic.url");
+    client = new ElasticSearchClient("your.elastic.url", 9300, "your.cluster.name");
   }
 ```
 
@@ -117,7 +117,7 @@ At this point it is possible to enable this skill for all amazon echos, register
 
 
 ## Short demo video
-[https://twitter.com/unterstein/status/830020694046023680](https://twitter.com/unterstein/status/830020694046023680)
+[https://twitter.com/unterstein/status/832302202702196736](https://twitter.com/unterstein/status/832302202702196736)
 
 
 ## Useful reads

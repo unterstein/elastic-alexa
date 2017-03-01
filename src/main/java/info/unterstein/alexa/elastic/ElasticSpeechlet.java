@@ -15,7 +15,7 @@ public class ElasticSpeechlet implements Speechlet {
   private final ElasticSearchClient client;
 
   public ElasticSpeechlet() {
-    client = new ElasticSearchClient("host", 9300, "muCluster");
+    client = new ElasticSearchClient("your.elastic.url", 9300, "your.cluster.name");
   }
 
   @Override
